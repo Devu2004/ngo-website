@@ -10,15 +10,3 @@ html,body{
 body{
     background-color: #FAF0DD;
 }
-.navbar{
-    display: flex;
-    justify-content: center;
-    background-color: #212121;
-}
-.container{
-    padding: .5rem;
-    background-color: #FAF0DD;
-    width: 80%;
-    margin: 1rem;
-    border-radius: 1rem;
-}

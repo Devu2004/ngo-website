@@ -1,37 +1,701 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="#">MyWebsite</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#services">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Gardens Play School - Shining Light of Hope</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gold: #E6B800;
+            --light-gold: #F5E6A3;
+            --warm-beige: #F7F3E9;
+            --dark-brown: #8B4513;
+            --text-dark: #2C3E50;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        /* Navigation Styles */
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-gold), var(--light-gold));
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--text-dark) !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--text-dark) !important;
+            font-weight: 500;
+            margin: 0 0.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--dark-brown) !important;
+            transform: translateY(-2px);
+        }
+
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background-color: var(--dark-brown);
+            transition: all 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--warm-beige), var(--light-gold));
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%23E6B800" opacity="0.1"/><circle cx="80" cy="40" r="3" fill="%23E6B800" opacity="0.1"/><circle cx="40" cy="80" r="2" fill="%23E6B800" opacity="0.1"/></svg>');
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--dark-brown);
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .btn-primary-custom {
+            background: linear-gradient(45deg, var(--primary-gold), var(--dark-brown));
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Section Styles */
+        .section-padding {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(45deg, var(--primary-gold), var(--dark-brown));
+            border-radius: 2px;
+        }
+
+        /* Journey Section */
+        .journey-section {
+            background: var(--warm-beige);
+        }
+
+        .journey-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-left: 5px solid var(--primary-gold);
+        }
+
+        .journey-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .journey-card h4 {
+            color: var(--dark-brown);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .journey-card .icon {
+            font-size: 2.5rem;
+            color: var(--primary-gold);
+            margin-bottom: 1rem;
+        }
+
+        /* Challenge Section */
+        .challenge-section {
+            background: linear-gradient(135deg, var(--primary-gold), var(--light-gold));
+            color: var(--text-dark);
+        }
+
+        .challenge-content {
+            background: rgba(255,255,255,0.9);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Vision Section */
+        .vision-section {
+            background: var(--warm-beige);
+        }
+
+        .vision-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            height: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .vision-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .vision-card .icon {
+            font-size: 3rem;
+            color: var(--primary-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .vision-card h5 {
+            color: var(--dark-brown);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Support Section */
+        .support-section {
+            background: linear-gradient(135deg, var(--primary-gold), var(--light-gold));
+        }
+
+        .support-content {
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .quote {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--dark-brown);
+            margin: 2rem 0;
+            padding: 1rem;
+            border-left: 4px solid var(--primary-gold);
+            background: rgba(230, 184, 0, 0.1);
+        }
+
+        /* Help Section */
+        .help-section {
+            background: var(--warm-beige);
+        }
+
+        .help-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            height: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-top: 5px solid var(--primary-gold);
+        }
+
+        .help-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .help-number {
+            background: var(--primary-gold);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1rem;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            background: white;
+        }
+
+        .gallery-img {
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer h5 {
+            color: var(--primary-gold);
+            margin-bottom: 1rem;
+        }
+
+        .footer a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: var(--primary-gold);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-seedling me-2"></i>Kids Gardens Play School
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#journey">Our Journey</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#challenges">Challenges</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#vision">Vision</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#support">Support</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#help">Help Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content fade-in">
+                    <h1 class="hero-title">Kids Gardens Play School</h1>
+                    <h2 class="hero-subtitle">Shining Light of Hope</h2>
+                    <p class="lead mb-4">Empowering futures through education, safety, and compassion.</p>
+                    <button class="btn btn-primary-custom btn-lg">
+                        <i class="fas fa-heart me-2"></i>Donate Now
+                    </button>
+                    <button class="btn btn-outline-dark btn-lg ms-3">
+                        <i class="fas fa-info-circle me-2"></i>Learn More
+                    </button>
+                </div>
+                <div class="col-lg-6 text-center fade-in">
+                    <img src="/placeholder.svg?height=400&width=500" 
+                         alt="Kids Gardens Play School Children" class="img-fluid rounded-3 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section id="journey" class="journey-section section-padding">
+        <div class="container">
+            <h2 class="section-title fade-in">Our Journey: Planting Seeds of Knowledge</h2>
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center fade-in">
+                    <p class="lead">On March 15, 2019, Saadhvi Foundation embarked on a profound mission to establish a school where underprivileged and economically disadvantaged children could access quality education without discrimination. This vision gave birth to Kids Gardens Play School. We started in a rented shed, lacking proper facilities, but fueled by an unwavering dream and dedication.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 fade-in">
+                    <div class="journey-card">
+                        <div class="icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h4>Humble Beginnings</h4>
+                        <p>Started in a rented cement shed, facing extreme weather conditions with leaking roofs and sweltering heat, yet students persevered.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="journey-card">
+                        <div class="icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4>Unwavering Dedication</h4>
+                        <p>Despite the challenges, our commitment to providing education remained strong, driven by the belief in a brighter future for every child.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="journey-card">
+                        <div class="icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>A Dream Realized</h4>
+                        <p>From a small shed, Kids Gardens Play School emerged as a testament to the power of education and community support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges Section -->
+    <section id="challenges" class="challenge-section section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="challenge-content fade-in">
+                        <h2 class="section-title">Overcoming Challenges: A New Chapter</h2>
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <p>Our school faces a critical juncture. The five-year lease on our current land has expired, and with the unfortunate demise of the landowner, we find ourselves in an uncertain position. This necessitates a move to a permanent location.</p>
+                                <p>Despite a space where no child is denied education due to poverty, it lacks essential infrastructure. We strive to provide an environment with AI, skill development, technology, and an innovative approach. We strive to provide not just books, but a pathway to a bright future.</p>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <img src="/placeholder.svg?height=300&width=400" 
+                                     alt="School Community" class="img-fluid rounded-3 shadow">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section id="vision" class="vision-section section-padding">
+        <div class="container">
+            <h2 class="section-title fade-in">Our Vision: Building a Brighter Future</h2>
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center fade-in">
+                    <p class="lead">Our goal is ambitious yet vital: to acquire new land and construct a healthy, safe, and technologically equipped school building. This permanent home will ensure uninterrupted, quality education for all.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4 fade-in">
+                    <div class="vision-card">
+                        <div class="icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h5>Acquire New Land</h5>
+                        <p>Secure a permanent site for our school's future.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4 fade-in">
+                    <div class="vision-card">
+                        <div class="icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h5>Construct Modern Building</h5>
+                        <p>Create a safe, healthy, and tech-ready learning environment.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4 fade-in">
+                    <div class="vision-card">
+                        <div class="icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h5>Advanced Curriculum</h5>
+                        <p>Offer AI, coding, IT skills, spoken English, and employability training.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4 fade-in">
+                    <div class="vision-card">
+                        <div class="icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h5>Inclusive Education</h5>
+                        <p>Provide quality education from PG to 12th grade, without discrimination.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section id="support" class="support-section section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="support-content fade-in">
+                        <h2 class="section-title">Our Plea: A Call for Support</h2>
+                        <p class="lead">We stand at a critical juncture where our current challenges threaten to jeopardize the future of our children. The rented building is no longer secure, and we lack the own land. However, we still possess your trust, your support, and our unwavering determination.</p>
+                        <div class="quote">
+                            <i class="fas fa-quote-left me-2"></i>
+                            "When children receive education, security, and compassion, only then does society truly progress."
+                            <i class="fas fa-quote-right ms-2"></i>
+                        </div>
+                        <p>Every contribution, no matter how small, makes a significant difference.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Help Section -->
+    <section id="help" class="help-section section-padding">
+        <div class="container">
+            <h2 class="section-title fade-in">How You Can Help: Building Foundations Together</h2>
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center fade-in">
+                    <p class="lead">Your support is the cornerstone of our future. We invite you to join us in creating a lasting legacy for these children.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4 fade-in">
+                    <div class="help-card">
+                        <div class="help-number">1</div>
+                        <h5>Donate a Brick</h5>
+                        <p>Contribute directly to the construction of our new school building.</p>
+                        <button class="btn btn-primary-custom">Donate Now</button>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 fade-in">
+                    <div class="help-card">
+                        <div class="help-number">2</div>
+                        <h5>Financial Contribution</h5>
+                        <p>Provide general support for land acquisition and construction.</p>
+                        <button class="btn btn-primary-custom">Contribute</button>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 fade-in">
+                    <div class="help-card">
+                        <div class="help-number">3</div>
+                        <h5>Share Our Story</h5>
+                        <p>Spread awareness by sharing our mission with others who can make a difference.</p>
+                        <button class="btn btn-primary-custom">Share Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto text-center fade-in">
+                    <p class="lead"><strong>A permanent school building will not just be an edifice; it will be the foundation for the future of thousands of children.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section section-padding">
+        <div class="container">
+            <h2 class="section-title fade-in">Voices of Hope: A Glimpse into Our World</h2>
+            <div class="row mb-4">
+                <div class="col-lg-8 mx-auto text-center fade-in">
+                    <p class="lead">Explore these images that capture the essence of Kids Gardens Play School - the joy, the challenges, and the unwavering spirit of our students and staff.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4 fade-in">
+                    <img src="/placeholder.svg?height=300&width=400" 
+                         alt="Students Learning" class="img-fluid gallery-img">
+                </div>
+                <div class="col-md-4 mb-4 fade-in">
+                    <img src="/placeholder.svg?height=300&width=400" 
+                         alt="Teaching Moment" class="img-fluid gallery-img">
+                </div>
+                <div class="col-md-4 mb-4 fade-in">
+                    <img src="/placeholder.svg?height=300&width=400" 
+                         alt="Outdoor Activities" class="img-fluid gallery-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-seedling me-2"></i>Kids Gardens Play School</h5>
+                    <p>Empowering futures through education, safety, and compassion. Building a brighter tomorrow for every child.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#journey">Our Journey</a></li>
+                        <li><a href="#vision">Our Vision</a></li>
+                        <li><a href="#support">Support Us</a></li>
+                        <li><a href="#help">How to Help</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-envelope me-2"></i>info@kidsgardens.org</p>
+                    <p><i class="fas fa-phone me-2"></i>+91 XXXXX XXXXX</p>
+                    <div class="mt-3">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>&copy; 2024 Kids Gardens Play School. All rights reserved. | Powered by Saadhvi Foundation</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'linear-gradient(135deg, var(--primary-gold), var(--light-gold))';
+                navbar.style.backdropFilter = 'blur(10px)';
+            } else {
+                navbar.style.background = 'linear-gradient(135deg, var(--primary-gold), var(--light-gold))';
+            }
+        });
+    </script>
+</body>
 </html>
