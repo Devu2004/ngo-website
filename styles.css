@@ -513,3 +513,63 @@ p {
 .col-lg-6 {
   margin-bottom: 2rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Impact Section Cards */
+.impact-box h3 {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.impact-box p.card-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+}
+
+/* Foundation Section Styling */
+#foundation {
+  background-color: #fef9e7; /* already bg-warning tone */
+  /* border-top: 4px solid var(--primary-color); */
+}
+
+#foundation ul li {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+}
+
+/* Hover effect on foundation image */
+#foundation img:hover {
+  transform: scale(1.05);
+  transition: 0.4s ease;
+}
