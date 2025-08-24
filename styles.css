@@ -206,7 +206,7 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: left 0.5s;
 }
 
@@ -331,7 +331,6 @@ body {
   color: var(--text-primary);
 }
 
-/* Enhanced card styling with better spacing */
 .card {
   border: none;
   border-radius: 12px;
@@ -429,60 +428,6 @@ footer::before {
   color: var(--warning-color) !important;
 }
 
-/* Enhanced social media icons */
-.social-icon {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  position: relative;
-  overflow: hidden;
-  backdrop-filter: blur(10px);
-}
-
-.social-icon::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s;
-}
-
-.social-icon:hover::before {
-  left: 100%;
-}
-
-.social-icon:hover {
-  transform: translateY(-5px) scale(1.1);
-  background: linear-gradient(135deg, var(--warning-color), #f0b90b);
-  border-color: var(--warning-color);
-  box-shadow: 0 10px 25px rgba(245, 200, 66, 0.3);
-}
-
-.social-icon:nth-child(1):hover {
-  background: linear-gradient(135deg, #1877f2, #42a5f5);
-  box-shadow: 0 10px 25px rgba(24, 119, 242, 0.3);
-}
-
-.social-icon:nth-child(2):hover {
-  background: linear-gradient(135deg, #1da1f2, #42a5f5);
-  box-shadow: 0 10px 25px rgba(29, 161, 242, 0.3);
-}
-
-.social-icon:nth-child(3):hover {
-  background: linear-gradient(135deg, #e4405f, #fd5949);
-  box-shadow: 0 10px 25px rgba(228, 64, 95, 0.3);
-}
-
-.social-icon:nth-child(4):hover {
-  background: linear-gradient(135deg, #0077b5, #42a5f5);
-  box-shadow: 0 10px 25px rgba(0, 119, 181, 0.3);
-}
 
 /* Footer bottom section */
 .border-secondary {
@@ -556,7 +501,6 @@ section {
   }
 }
 
-/* Enhanced typography hierarchy */
 h1,
 h2,
 h3,
