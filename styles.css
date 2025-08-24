@@ -63,7 +63,7 @@ body {
   position: absolute;
   width: 0;
   height: 2px;
-  bottom: -5px;
+  bottom: 5px;
   left: 50%;
   background-color: var(--primary-color);
   transition: all 0.3s ease;
@@ -102,7 +102,7 @@ body {
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding: 120px 0 80px;
+  padding: 20px 0 40px;
 }
 
 .hero-section::before {
