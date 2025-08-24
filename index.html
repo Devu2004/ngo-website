@@ -1,462 +1,666 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kids Gardens Play School: Shining Light of Hope</title>
-    <meta name="description" content="Empowering futures through education, safety, and compassion. Kids Gardens Play School provides quality education from PG to 8th grade.">
-    
+    <meta
+      name="description"
+      content="Empowering futures through education, safety, and compassion. Kids Gardens Play School provides quality education from PG to 8th grade."
+    />
+
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <!-- Nav -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand fw-bold text-primary" href="#home">
-                <i class="fas fa-graduation-cap me-2"></i>Kids Gardens
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#journey">Journey</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#vision">Vision</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#gallery">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <button class="btn btn-warning ms-2 pulse-btn" onclick="handleDonate()">Donate</button>
-                    </li>
-                </ul>
-            </div>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="#home">
+          <i class="fas fa-graduation-cap me-2"></i>Kids Gardens
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#journey">Journey</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#vision">Vision</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <button
+                class="btn btn-warning ms-2 pulse-btn"
+                onclick="handleDonate()"
+              >
+                Donate
+              </button>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero-section">
-        <div class="container">
-            <div class="row align-items-center min-vh-100 pt-5">
-                <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold mb-4">Kids Gardens Play School: Shining Light of Hope</h1>
-                    <p class="lead mb-4">Empowering futures through education, safety, and compassion.</p>
-                    <div class="d-flex gap-3 flex-wrap">
-                        <button class="btn btn-warning btn-lg" onclick="handleDonate()">Donate Now</button>
-                        <a href="#journey" class="btn btn-outline-primary btn-lg">Learn More</a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <img src="./assets/hero-section.jpg" 
-                         alt="KidsGardens" class="img-fluid rounded shadow">
-                </div>
+      <div class="container">
+        <div class="row align-items-center min-vh-100 pt-5">
+          <div class="col-lg-6">
+            <h1 class="display-4 fw-bold mb-4">
+              Kids Gardens Play School: Shining Light of Hope
+            </h1>
+            <p class="lead mb-4">
+              Empowering futures through education, safety, and compassion.
+            </p>
+            <div class="d-flex gap-3 flex-wrap">
+              <button class="btn btn-warning btn-lg" onclick="handleDonate()">
+                Donate Now
+              </button>
+              <a href="#journey" class="btn btn-outline-primary btn-lg"
+                >Learn More</a
+              >
             </div>
+          </div>
+          <div class="col-lg-6">
+            <img
+              src="./assets/hero-section.jpg"
+              alt="KidsGardens"
+              class="img-fluid rounded shadow"
+            />
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Journey Section -->
     <section id="journey" class="section-spacing bg-light">
-        <div class="container">
-            <div class="text-center mb-5 fade-in-up">
-                <h2 class="display-5 fw-bold">Our Journey: Planting Seeds of Knowledge</h2>
-                <p class="lead">On March 13, 2019, Saachi Foundation embarked on a profound mission: to establish a school where underprivileged and economically disadvantaged children could access quality education without discrimination. This vision gave birth to Kids Gardens Play School. We started in a rented shed, lacking proper facilities, but fueled by an unwavering dream and dedication.</p>
-            </div>
-            
-            <div class="row g-5">
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm hover-lift">
-                        <div class="card-body text-center">
-                            <div class="icon-circle bg-primary text-white mb-3">
-                                <i class="fas fa-seedling"></i>
-                            </div>
-                            <h5 class="card-title">Humble Beginnings</h5>
-                            <p class="card-text">Started in a rented cement shed, facing extreme weather conditions with leaking roofs and sweltering heat, yet students persevered.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm hover-lift">
-                        <div class="card-body text-center">
-                            <div class="icon-circle bg-success text-white mb-3">
-                                <i class="fas fa-heart"></i>
-                            </div>
-                            <h5 class="card-title">Unwavering Dedication</h5>
-                            <p class="card-text">Despite the challenges, our commitment to providing education remained strong, driven by the hope for a brighter future for every child.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm hover-lift">
-                        <div class="card-body text-center">
-                            <div class="icon-circle bg-warning text-white mb-3">
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <h5 class="card-title">A Dream Realized</h5>
-                            <p class="card-text">From a small shed, Kids Gardens Play School emerged as a testament to the power of education and community support.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="text-center mb-5 fade-in-up">
+          <h2 class="display-5 fw-bold">
+            Our Journey: Planting Seeds of Knowledge
+          </h2>
+          <p class="lead">
+            On March 13, 2019, Saachi Foundation embarked on a profound mission:
+            to establish a school where underprivileged and economically
+            disadvantaged children could access quality education without
+            discrimination. This vision gave birth to Kids Gardens Play School.
+            We started in a rented shed, lacking proper facilities, but fueled
+            by an unwavering dream and dedication.
+          </p>
         </div>
+
+        <div class="row g-5">
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm hover-lift">
+              <div class="card-body text-center">
+                <div class="icon-circle bg-primary text-white mb-3">
+                  <i class="fas fa-seedling"></i>
+                </div>
+                <h5 class="card-title">Humble Beginnings</h5>
+                <p class="card-text">
+                  Started in a rented cement shed, facing extreme weather
+                  conditions with leaking roofs and sweltering heat, yet
+                  students persevered.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm hover-lift">
+              <div class="card-body text-center">
+                <div class="icon-circle bg-success text-white mb-3">
+                  <i class="fas fa-heart"></i>
+                </div>
+                <h5 class="card-title">Unwavering Dedication</h5>
+                <p class="card-text">
+                  Despite the challenges, our commitment to providing education
+                  remained strong, driven by the hope for a brighter future for
+                  every child.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm hover-lift">
+              <div class="card-body text-center">
+                <div class="icon-circle bg-warning text-white mb-3">
+                  <i class="fas fa-star"></i>
+                </div>
+                <h5 class="card-title">A Dream Realized</h5>
+                <p class="card-text">
+                  From a small shed, Kids Gardens Play School emerged as a
+                  testament to the power of education and community support.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Challenges Section -->
     <section id="challenges" class="section-spacing bg-warning">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6 fade-in-left">
-                    <h2 class="display-5 fw-bold mb-4">Overcoming Challenges: A New Chapter</h2>
-                    <p class="mb-4">Our school faces a critical juncture. The five-year lease on our current land has expired, and with the unfortunate demise of the landowner, our continued presence there is no longer possible. This necessitates a move to a permanent location.</p>
-                    <p>Imagine a space where no child is denied education due to poverty. A place where students from PG to 8th grade thrive in an environment rich with AI, skill development, technology, and modern learning. We strive to provide not just books, but a pathway to a bright future</p>
-                </div>
-                <div class="col-lg-6 fade-in-right">
-                    <img src="./assets/teacher-and-students.jpg" 
-                         alt="School community gathering" class="img-fluid rounded shadow floating-image">
-                </div>
-            </div>
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 fade-in-left">
+            <h2 class="display-5 fw-bold mb-4">
+              Overcoming Challenges: A New Chapter
+            </h2>
+            <p class="mb-4">
+              Our school faces a critical juncture. The five-year lease on our
+              current land has expired, and with the unfortunate demise of the
+              landowner, our continued presence there is no longer possible.
+              This necessitates a move to a permanent location.
+            </p>
+            <p>
+              Imagine a space where no child is denied education due to poverty.
+              A place where students from PG to 8th grade thrive in an
+              environment rich with AI, skill development, technology, and
+              modern learning. We strive to provide not just books, but a
+              pathway to a bright future
+            </p>
+          </div>
+          <div class="col-lg-6 fade-in-right">
+            <img
+              src="./assets/teacher-and-students.jpg"
+              alt="School community gathering"
+              class="img-fluid rounded shadow floating-image"
+            />
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Vision Section -->
-    <section id="vision" class="section-spacing bg-light">
-        <div class="container">
-            <div class="text-center mb-5 fade-in-up">
-                <h2 class="display-5 fw-bold">Our Vision: Building a Brighter Future</h2>
-                <p class="lead">Our goal is ambitious yet vital: to acquire new land and construct a healthy, safe, and technologically equipped school building. This permanent home will ensure uninterrupted, quality education for all.</p>
-            </div>
-            
-            <div class="row g-5">
-                <div class="col-md-6">
-                    <div class="card h-100 border-0 shadow-sm hover-lift">
-                        <div class="card-body">
-                            <div class="icon-circle bg-success text-white mb-3">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <h5 class="card-title">Acquire New Land</h5>
-                            <p class="card-text">Secure a permanent site for our school's future.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card h-100 border-0 shadow-sm hover-lift">
-                        <div class="card-body">
-                            <div class="icon-circle bg-primary text-white mb-3">
-                                <i class="fas fa-building"></i>
-                            </div>
-                            <h5 class="card-title">Construct Modern Building</h5>
-                            <p class="card-text">Create a safe, healthy, and tech-ready learning environment.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card h-100 border-0 shadow-sm hover-lift">
-                        <div class="card-body">
-                            <div class="icon-circle bg-info text-white mb-3">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <h5 class="card-title">Advanced Curriculum</h5>
-                            <p class="card-text">Offer AI, coding, IT skills, spoken English, and employability training.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card h-100 border-0 shadow-sm hover-lift">
-                        <div class="card-body">
-                            <div class="icon-circle bg-warning text-white mb-3">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <h5 class="card-title">Inclusive Education</h5>
-                            <p class="card-text">Provide quality education from PG to 8th grade, without discrimination.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section id="vision" class="section-spacing bg-light fade-in-up">
+      <div class="container">
+        <div class="text-center mb-5 fade-in-up">
+          <h2 class="display-5 fw-bold">
+            Our Vision: Building a Brighter Future
+          </h2>
+          <p class="lead">
+            Our goal is ambitious yet vital: to acquire new land and construct a
+            healthy, safe, and technologically equipped school building. This
+            permanent home will ensure uninterrupted, quality education for all.
+          </p>
         </div>
+
+        <div class="row g-5">
+          <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm hover-lift">
+              <div class="card-body">
+                <div class="icon-circle bg-success text-white mb-3">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h5 class="card-title">Acquire New Land</h5>
+                <p class="card-text">
+                  Secure a permanent site for our school's future.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm hover-lift">
+              <div class="card-body">
+                <div class="icon-circle bg-primary text-white mb-3">
+                  <i class="fas fa-building"></i>
+                </div>
+                <h5 class="card-title">Construct Modern Building</h5>
+                <p class="card-text">
+                  Create a safe, healthy, and tech-ready learning environment.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm hover-lift">
+              <div class="card-body">
+                <div class="icon-circle bg-info text-white mb-3">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h5 class="card-title">Advanced Curriculum</h5>
+                <p class="card-text">
+                  Offer AI, coding, IT skills, spoken English, and employability
+                  training.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm hover-lift">
+              <div class="card-body">
+                <div class="icon-circle bg-warning text-white mb-3">
+                  <i class="fas fa-users"></i>
+                </div>
+                <h5 class="card-title">Inclusive Education</h5>
+                <p class="card-text">
+                  Provide quality education from PG to 8th grade, without
+                  discrimination.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Support Section -->
     <section id="support" class="section-spacing bg-warning">
-        <div class="container">
-            <div class="text-center fade-in-up">
-                <h2 class="display-5 fw-bold mb-4">Our Plea: A Call for Support</h2>
-                <p class="lead mb-4">We stand at a critical juncture where our current challenges threaten to jeopardize the future of our children. The rented building is no longer secure, and we lack the own land. However, we still possess your trust, your support, and our unwavering determination.</p>
-                <blockquote class="blockquote">
-                    <p class="mb-0">"When children receive education, security, and compassion, only then does society truly progress."</p>
-                </blockquote>
-                <p class="mt-3">Every contribution, no matter how small, makes a significant difference.</p>
-            </div>
+      <div class="container">
+        <div class="text-center fade-in-up">
+          <h2 class="display-5 fw-bold mb-4">Our Plea: A Call for Support</h2>
+          <p class="lead mb-4">
+            We stand at a critical juncture where our current challenges
+            threaten to jeopardize the future of our children. The rented
+            building is no longer secure, and we lack the own land. However, we
+            still possess your trust, your support, and our unwavering
+            determination.
+          </p>
+          <blockquote class="blockquote">
+            <p class="mb-0">
+              "When children receive education, security, and compassion, only
+              then does society truly progress."
+            </p>
+          </blockquote>
+          <p class="mt-3">
+            Every contribution, no matter how small, makes a significant
+            difference.
+          </p>
         </div>
+      </div>
     </section>
 
     <!-- Help Section -->
     <section id="help" class="section-spacing bg-light">
-        <div class="container">
-            <div class="text-center mb-5 fade-in-up">
-                <h2 class="display-5 fw-bold">How You Can Help: Building Foundations Together</h2>
-                <p class="lead">Your support is the cornerstone of our future. We invite you to join us in creating a lasting legacy for these children.</p>
-            </div>
-            
-            <div class="row g-5">
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm text-center hover-lift">
-                        <div class="card-body">
-                            <div class="icon-circle bg-danger text-white mb-3 mx-auto">
-                                <i class="fas fa-hand-holding-heart"></i>
-                            </div>
-                            <h5 class="card-title">1. Donate a Brick</h5>
-                            <p class="card-text">Contribute towards the construction of our new school building.</p>
-                            <button class="btn btn-warning" onclick="handleDonate()">Donate Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm text-center hover-lift">
-                        <div class="card-body">
-                            <div class="icon-circle bg-success text-white mb-3 mx-auto">
-                                <i class="fas fa-dollar-sign"></i>
-                            </div>
-                            <h5 class="card-title">2. Financial Contribution</h5>
-                            <p class="card-text">Provide general support for land acquisition and construction.</p>
-                            <button class="btn btn-warning" onclick="handleDonate()">Contribute</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm text-center hover-lift">
-                        <div class="card-body">
-                            <div class="icon-circle bg-info text-white mb-3 mx-auto">
-                                <i class="fas fa-share-alt"></i>
-                            </div>
-                            <h5 class="card-title">3. Share Our Story</h5>
-                            <p class="card-text">Spread our message to reach compassionate hearts who can make a difference.</p>
-                            <button class="btn btn-warning" onclick="shareStory()">Share Story</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-5 fade-in-up">
-                <p class="lead">A permanent school building will not just be an edifice; it will be the foundation for the futures of thousands of children.</p>
-            </div>
+      <div class="container">
+        <div class="text-center mb-5 fade-in-up">
+          <h2 class="display-5 fw-bold">
+            How You Can Help: Building Foundations Together
+          </h2>
+          <p class="lead">
+            Your support is the cornerstone of our future. We invite you to join
+            us in creating a lasting legacy for these children.
+          </p>
         </div>
-    </section>
 
+        <div class="row g-5">
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm text-center hover-lift">
+              <div class="card-body">
+                <div class="icon-circle bg-danger text-white mb-3 mx-auto">
+                  <i class="fas fa-hand-holding-heart"></i>
+                </div>
+                <h5 class="card-title">1. Donate a Brick</h5>
+                <p class="card-text">
+                  Contribute towards the construction of our new school
+                  building.
+                </p>
+                <button class="btn btn-warning" onclick="handleDonate()">
+                  Donate Now
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm text-center hover-lift">
+              <div class="card-body">
+                <div class="icon-circle bg-success text-white mb-3 mx-auto">
+                  <i class="fas fa-dollar-sign"></i>
+                </div>
+                <h5 class="card-title">2. Financial Contribution</h5>
+                <p class="card-text">
+                  Provide general support for land acquisition and construction.
+                </p>
+                <button class="btn btn-warning" onclick="handleDonate()">
+                  Contribute
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm text-center hover-lift">
+              <div class="card-body">
+                <div class="icon-circle bg-info text-white mb-3 mx-auto">
+                  <i class="fas fa-share-alt"></i>
+                </div>
+                <h5 class="card-title">3. Share Our Story</h5>
+                <p class="card-text">
+                  Spread our message to reach compassionate hearts who can make
+                  a difference.
+                </p>
+                <button class="btn btn-warning" onclick="shareStory()">
+                  Share Story
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5 fade-in-up">
+          <p class="lead">
+            A permanent school building will not just be an edifice; it will be
+            the foundation for the futures of thousands of children.
+          </p>
+        </div>
+      </div>
+    </section>
 
     <!-- Gallery Section -->
     <section id="gallery" class="section-spacing">
-        <div class="container">
-            <div class="text-center mb-5 fade-in-up">
-                <h2 class="display-5 fw-bold">
-Voices of Hope: A Glimpse into Our World</h2>
-                <p class="lead">Explore these images that capture the essence of Kids Gardens Play School – the joy, the challenges, and the unwavering spirit of our students and staff.</p>
-                
-                <!-- Updated photo upload section for multiple file selection and better UI -->
-                <div class="mt-4">
-                    <div class="card border-2 border-dashed border-primary p-4 hover-lift">
-                        <h5 class="mb-3">Add Your Photos to Our Gallery</h5>
-                        <div class="upload-area" onclick="document.getElementById('photoUpload').click()">
-                            <i class="fas fa-cloud-upload-alt fa-3x text-primary mb-3"></i>
-                            <p class="mb-2">Click to upload multiple photos or drag and drop</p>
-                            <small class="text-muted">Supported formats: JPG, PNG, GIF (Max 5MB each)</small>
-                        </div>
-                        <input type="file" id="photoUpload" multiple accept="image/*" style="display: none;" onchange="handlePhotoUpload(event)">
-                        <button class="btn btn-primary mt-3" onclick="document.getElementById('photoUpload').click()">
-                            <i class="fas fa-plus me-2"></i>Upload Multiple Photos
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Removed card-body from gallery images to show only images without captions or buttons -->
-            <div class="row g-4" id="galleryContainer">
-                <div class="col-lg-4 col-md-6">
-                    <div class="gallery-item">
-                        <img src="./assets//student-devlopment-projects.jpg" 
-                             alt="Students working on construction project" class="img-fluid rounded shadow-sm hover-lift">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="gallery-item">
-                        <img src="./assets/students-learning-envoirment.jpg" 
-                             alt="Students in classroom learning environment" class="img-fluid rounded shadow-sm hover-lift">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="gallery-item">
-                        <img src="./assets//teacher-and-students.jpg"
-                             alt="Teacher and students building community spirit" class="img-fluid rounded shadow-sm hover-lift">
-                    </div>
-                </div>
-                 <div class="col-lg-4 col-md-6">
-                    <div class="gallery-item">
-                        <img src="./assets/washing-hand.jpg"
-                             alt="Teacher and students building community spirit" class="img-fluid rounded shadow-sm hover-lift">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="gallery-item">
-                      <img src="./assets/police.jpg"
-                           alt="Teacher and students building community spirit" class="img-fluid rounded shadow-sm hover-lift">
-                  </div>
+      <div class="container">
+        <div class="text-center mb-5 fade-in-up">
+          <h2 class="display-5 fw-bold">
+            Voices of Hope: A Glimpse into Our World
+          </h2>
+          <p class="lead">
+            Explore these images that capture the essence of Kids Gardens Play
+            School – the joy, the challenges, and the unwavering spirit of our
+            students and staff.
+          </p>
+
+          <div class="mt-4">
+            <div
+              class="card border-2 border-dashed border-primary p-4 hover-lift"
+            >
+              <h5 class="mb-3">Add Your Photos to Our Gallery</h5>
+              <div
+                class="upload-area"
+                onclick="document.getElementById('photoUpload').click()"
+              >
+                <i class="fas fa-cloud-upload-alt fa-3x text-primary mb-3"></i>
+                <p class="mb-2">
+                  Click to upload multiple photos or drag and drop
+                </p>
+                <small class="text-muted"
+                  >Supported formats: JPG, PNG, GIF (Max 5MB each)</small
+                >
               </div>
-                   <div class="col-lg-4 col-md-6">
-                    <div class="gallery-item">
-                        <img src="./assets/playing-children.jpg"
-                             alt="Teacher and students building community spirit" class="img-fluid rounded shadow-sm hover-lift">
-                    </div>
-                </div>
+              <input
+                type="file"
+                id="photoUpload"
+                multiple
+                accept="image/*"
+                style="display: none"
+                onchange="handlePhotoUpload(event)"
+              />
+              <button
+                class="btn btn-primary mt-3"
+                onclick="document.getElementById('photoUpload').click()"
+              >
+                <i class="fas fa-plus me-2"></i>Upload Multiple Photos
+              </button>
             </div>
+          </div>
         </div>
+        <div class="row g-4" id="galleryContainer">
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img
+                src="./assets//student-devlopment-projects.jpg"
+                alt="Students working on construction project"
+                class="img-fluid rounded shadow-sm hover-lift"
+              />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img
+                src="./assets/students-learning-envoirment.jpg"
+                alt="Students in classroom learning environment"
+                class="img-fluid rounded shadow-sm hover-lift"
+              />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img
+                src="./assets//teacher-and-students.jpg"
+                alt="Teacher and students building community spirit"
+                class="img-fluid rounded shadow-sm hover-lift"
+              />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img
+                src="./assets/washing-hand.jpg"
+                alt="Teacher and students building community spirit"
+                class="img-fluid rounded shadow-sm hover-lift"
+              />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img
+                src="./assets/police.jpg"
+                alt="Teacher and students building community spirit"
+                class="img-fluid rounded shadow-sm hover-lift"
+              />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item">
+              <img
+                src="./assets/playing-children.jpg"
+                alt="Teacher and students building community spirit"
+                class="img-fluid rounded shadow-sm hover-lift"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- IMPACT SECTION -->
+    <section id="impact" class="section-spacing bg-light text-center">
+      <div class="container">
+        <h2 class="display-5 fade-in-up">
+          Our Impact: Nurturing Future Leaders
+        </h2>
+        <p class="lead mb-5 fade-in-up">
+          Since its inception, Kids Gardens Play School has been a sanctuary of
+          learning for children from underprivileged backgrounds. We believe in
+          holistic development, fostering not just academic excellence but also
+          critical thinking and life skills. Our programs are designed to
+          empower every child to reach their full potential..
+        </p>
+        <div class="row justify-content-center">
+          <div class="col-md-4 fade-in-up">
+            <div class="impact-box card hover-lift">
+              <div class="card-body">
+                <h3 class="fw-bold text-primary">500+</h3>
+                <p class="card-title">Students Impacted</p>
+                <p class="card-text">
+                  Over 500 children have benefited from our inclusive
+                  educational environment.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 fade-in-up">
+            <div class="impact-box card hover-lift">
+              <div class="card-body">
+                <h3 class="fw-bold text-primary">100%</h3>
+                <p class="card-title">Free Education</p>
+                <p class="card-text">
+                  Ensuring accessible education for all, regardless of economic
+                  status.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 fade-in-up">
+            <div class="impact-box card hover-lift">
+              <div class="card-body">
+                <h3 class="fw-bold text-primary">90%</h3>
+                <p class="card-title">Retention Rate</p>
+                <p class="card-text">
+                  High student retention reflects the positive learning
+                  experience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- IMPACT SECTION -->
-<section id="impact" class="section-spacing bg-light text-center">
-  <div class="container">
-    <h2 class="display-5 fade-in-up">Our Impact: Nurturing Future Leaders</h2>
-    <p class="lead mb-5 fade-in-up">Since its inception, Kids Gardens Play School has been a sanctuary of learning for children from underprivileged backgrounds. We believe in holistic development, fostering not just academic excellence but also critical thinking and life skills. Our programs are designed to empower every child to reach their full potential..</p>
-    <div class="row justify-content-center">
-      <div class="col-md-4 fade-in-up">
-        <div class="impact-box card hover-lift">
-          <div class="card-body">
-            <h3 class="fw-bold text-primary">500+</h3>
-            <p class="card-title">Students Impacted</p>
-            <p class="card-text">Over 500 children have benefited from our inclusive educational environment.</p>
+    <!-- FOUNDATION SECTION -->
+    <section id="foundation" class="section-spacing bg-warning">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8 fade-in-left">
+            <h2 class="display-5">Saachi Foundation: Our Guiding Light</h2>
+            <p class="lead">
+              Kids Gardens Play School is proudly operated by Saachi Foundation,
+              an NGO dedicated to social welfare and community development. Our
+              foundation's core mission is to uplift marginalized communities
+              through education, healthcare, and empowerment initiatives. We
+              envision a society where every individual has the opportunity to
+              thrive.
+            </p>
+            <p class="lead">
+              Our comprehensive approach addresses the root causes of poverty
+              and inequality, aiming for sustainable change.
+            </p>
+            <ul class="list-unstyled">
+              <li>✔ Community development programs</li>
+              <li>✔ Healthcare support initiatives</li>
+              <li>✔ Vocational training for adults</li>
+            </ul>
+          </div>
+          <div class="col-md-4 text-center fade-in-right">
+            <img
+              src="./assets/sacchi-foundation.jpg"
+              class="img-fluid rounded shadow floating-image"
+              alt="Saachi Foundation"
+            />
           </div>
         </div>
       </div>
-      <div class="col-md-4 fade-in-up">
-        <div class="impact-box card hover-lift">
-          <div class="card-body">
-            <h3 class="fw-bold text-primary">100%</h3>
-            <p class="card-title">Free Education</p>
-            <p class="card-text">Ensuring accessible education for all, regardless of economic status.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 fade-in-up">
-        <div class="impact-box card hover-lift">
-          <div class="card-body">
-            <h3 class="fw-bold text-primary">90%</h3>
-            <p class="card-title">Retention Rate</p>
-            <p class="card-text">High student retention reflects the positive learning experience.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOUNDATION SECTION -->
-<section id="foundation" class="section-spacing bg-warning">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-8 fade-in-left">
-        <h2 class="display-5">Saachi Foundation: Our Guiding Light</h2>
-        <p class="lead">Kids Gardens Play School is proudly operated by Saachi Foundation, an NGO dedicated to social welfare and community development. Our foundation's core mission is to uplift marginalized communities through education, healthcare, and empowerment initiatives. We envision a society where every individual has the opportunity to thrive.</p>
-        <p class="lead">Our comprehensive approach addresses the root causes of poverty and inequality, aiming for sustainable change.</p>
-        <ul class="list-unstyled">
-          <li>✔ Community development programs</li>
-          <li>✔ Healthcare support initiatives</li>
-          <li>✔ Vocational training for adults</li>
-        </ul>
-      </div>
-      <div class="col-md-4 text-center fade-in-right">
-        <img src="./assets/sacchi-foundation.jpg" class="img-fluid rounded shadow floating-image" alt="Saachi Foundation">
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- Contact & Footer -->
     <footer class="bg-dark text-white">
-        <!-- Main Footer Content -->
-        <div class="py-5">
-            <div class="container">
-                <div class="row g-5">
-                    <!-- School Info -->
-                    <div class="col-lg-6 col-md-6">
-                        <div class="footer-brand mb-4">
-                            <h4 class="fw-bold text-warning mb-3">
-                                <i class="fas fa-graduation-cap me-2"></i>Kids Gardens Play School
-                            </h4>
-                            <p class="text-light mb-3">Shining Light of Hope - Empowering futures through education, safety, and compassion.</p>
-                            <div class="d-flex align-items-center mb-2">
-                                <i class="fas fa-graduation-cap text-warning me-3"></i>
-                                <span>Education: PG to 8th Grade</span>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-calendar-alt text-warning me-3"></i>
-                                <span>Established: March 15, 2019</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Contact & Social -->
-                    <div class="col-lg-6 col-md-6">
-    <h5 class="fw-semibold mb-4 text-warning">Get in Touch</h5>
-    <div class="contact-info mb-4">
-        <div class="d-flex align-items-center mb-3">
-            <i class="fas fa-envelope text-warning me-3"></i>
-            <a href="mailto:saachifoundetion@gmail.com" class="text-light text-decoration-none hover-link">
-                saachifoundetion@gmail.com
-            </a>
-        </div>
-        <div class="d-flex align-items-center mb-3">
-            <i class="fas fa-map-marker-alt text-warning me-3"></i>
-            <span class="text-light">Building a Permanent Home</span>
-        </div>
-        <div class="d-flex align-items-center mb-3">
-            <i class="fas fa-phone text-warning me-3"></i>
-            <span class="text-light">+91 9167176355</span>
-        </div>
-        <div class="d-flex align-items-center mb-3">
-            <i class="fas fa-globe text-warning me-3"></i>
-            <a href="https://saachifoundation.com/" class="text-light text-decoration-none hover-link">
-                www.saachifoundation.org
-            </a>
-        </div>
-    </div>
-</div>
+      <!-- Main Footer Content -->
+      <div class="py-5">
+        <div class="container">
+          <div class="row g-5">
+            <!-- School Info -->
+            <div class="col-lg-6 col-md-6">
+              <div class="footer-brand mb-4">
+                <h4 class="fw-bold text-warning mb-3">
+                  <i class="fas fa-graduation-cap me-2"></i>Kids Gardens Play
+                  School
+                </h4>
+                <p class="text-light mb-3">
+                  Shining Light of Hope - Empowering futures through education,
+                  safety, and compassion.
+                </p>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="fas fa-graduation-cap text-warning me-3"></i>
+                  <span>Education: PG to 8th Grade</span>
                 </div>
+                <div class="d-flex align-items-center">
+                  <i class="fas fa-calendar-alt text-warning me-3"></i>
+                  <span>Established: March 15, 2019</span>
+                </div>
+              </div>
             </div>
-        </div>
 
-        <!-- Footer Bottom -->
-        <div class="border-top border-secondary py-4">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <p class="mb-0 text-light">&copy; 2024 Kids Gardens Play School - Saachi Foundation. All rights reserved.</p>
-                    </div>
-                    <div class="col-md-6 text-md-end">
-                        <p class="mb-0 text-warning fw-medium">"Building Foundations Together"</p>
-                    </div>
+            <div class="col-lg-6 col-md-6">
+              <h5 class="fw-semibold mb-4 text-warning">Get in Touch</h5>
+              <div class="contact-info mb-4">
+                <div class="d-flex align-items-center mb-3">
+                  <i class="fas fa-envelope text-warning me-3"></i>
+                  <a
+                    href="mailto:saachifoundetion@gmail.com"
+                    class="text-light text-decoration-none hover-link"
+                  >
+                    saachifoundetion@gmail.com
+                  </a>
                 </div>
-                <div class="text-center mt-3">
-                    <small class="text-muted">Every contribution, no matter how small, makes a significant difference in a child's future.</small>
+                <div class="d-flex align-items-center mb-3">
+                  <i class="fas fa-map-marker-alt text-warning me-3"></i>
+                  <span class="text-light">Building a Permanent Home</span>
                 </div>
+                <div class="d-flex align-items-center mb-3">
+                  <i class="fas fa-phone text-warning me-3"></i>
+                  <span class="text-light">+91 9167176355</span>
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                  <i class="fas fa-globe text-warning me-3"></i>
+                  <a
+                    href="https://saachifoundation.com/"
+                    class="text-light text-decoration-none hover-link"
+                  >
+                    www.saachifoundation.org
+                  </a>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="border-top border-secondary py-4">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <p class="mb-0 text-light">
+                &copy; 2024 Kids Gardens Play School - Saachi Foundation. All
+                rights reserved.
+              </p>
+            </div>
+            <div class="col-md-6 text-md-end">
+              <p class="mb-0 text-warning fw-medium">
+                "Building Foundations Together"
+              </p>
+            </div>
+          </div>
+          <div class="text-center mt-3">
+            <small class="text-muted"
+              >Every contribution, no matter how small, makes a significant
+              difference in a child's future.</small
+            >
+          </div>
+        </div>
+      </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
-
-
