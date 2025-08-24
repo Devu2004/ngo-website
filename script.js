@@ -1,6 +1,4 @@
-/**
- * Navigation and UI Enhancement Module
- */
+
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
