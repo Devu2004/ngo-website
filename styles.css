@@ -381,58 +381,165 @@ body {
   margin: 2rem 0;
 }
 
-/* Responsive Design */
+/* Footer Styling */
+footer {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="footerGrain" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="0.5" fill="%23fff" opacity="0.03"/></pattern></defs><rect width="100" height="100" fill="url(%23footerGrain)"/></svg>');
+  pointer-events: none;
+}
+
+.footer-brand h4 {
+  color: var(--warning-color) !important;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.footer-brand p {
+  color: #e9ecef !important;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.footer-links li a {
+  transition: all 0.3s ease;
+  position: relative;
+  padding-left: 0;
+}
+
+.footer-links li a::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--warning-color);
+  transition: width 0.3s ease;
+}
+
+.footer-links li a:hover::before {
+  width: 10px;
+}
+
+.hover-link:hover {
+  color: var(--warning-color) !important;
+  transform: translateX(5px);
+}
+
+.contact-info a:hover {
+  color: var(--warning-color) !important;
+}
+
+/* Enhanced social media icons */
+.social-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.social-icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.social-icon:hover::before {
+  left: 100%;
+}
+
+.social-icon:hover {
+  transform: translateY(-5px) scale(1.1);
+  background: linear-gradient(135deg, var(--warning-color), #f0b90b);
+  border-color: var(--warning-color);
+  box-shadow: 0 10px 25px rgba(245, 200, 66, 0.3);
+}
+
+.social-icon:nth-child(1):hover {
+  background: linear-gradient(135deg, #1877f2, #42a5f5);
+  box-shadow: 0 10px 25px rgba(24, 119, 242, 0.3);
+}
+
+.social-icon:nth-child(2):hover {
+  background: linear-gradient(135deg, #1da1f2, #42a5f5);
+  box-shadow: 0 10px 25px rgba(29, 161, 242, 0.3);
+}
+
+.social-icon:nth-child(3):hover {
+  background: linear-gradient(135deg, #e4405f, #fd5949);
+  box-shadow: 0 10px 25px rgba(228, 64, 95, 0.3);
+}
+
+.social-icon:nth-child(4):hover {
+  background: linear-gradient(135deg, #0077b5, #42a5f5);
+  box-shadow: 0 10px 25px rgba(0, 119, 181, 0.3);
+}
+
+/* Footer bottom section */
+.border-secondary {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+footer .text-warning {
+  color: var(--warning-color) !important;
+  font-weight: 600;
+}
+
+footer .text-light {
+  color: #e9ecef !important;
+}
+
+footer .text-muted {
+  color: #adb5bd !important;
+}
+
+/* Responsive footer adjustments */
 @media (max-width: 768px) {
-  .section-spacing {
-    padding: 80px 0;
+  footer .col-lg-4,
+  footer .col-lg-2,
+  footer .col-lg-3 {
+    margin-bottom: 2rem;
   }
 
-  .display-4 {
-    font-size: 2.25rem;
-    line-height: 1.2;
+  footer .text-md-end {
+    text-align: center !important;
+    margin-top: 1rem;
   }
 
-  .display-5 {
-    font-size: 1.875rem;
-    line-height: 1.25;
-  }
-
-  .hero-section {
-    text-align: center;
-    padding: 100px 0 60px;
-  }
-
-  .card-body {
-    padding: 1.5rem;
-  }
-
-  .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .col-md-4,
-  .col-md-6,
-  .col-lg-6 {
-    margin-bottom: 1.5rem;
-  }
-
-  .text-center.mb-5 {
-    margin-bottom: 3rem !important;
+  .social-links {
+    justify-content: center;
   }
 }
 
 @media (max-width: 576px) {
-  .container {
-    padding: 0 1rem;
+  footer .py-5 {
+    padding: 3rem 0 !important;
   }
 
-  .card-body {
-    padding: 1rem;
-  }
-
-  .upload-area {
-    padding: 1.5rem;
+  footer .py-4 {
+    padding: 2rem 0 !important;
   }
 }
 
@@ -514,36 +621,6 @@ p {
   margin-bottom: 2rem;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Impact Section Cards */
 .impact-box h3 {
   font-size: 2rem;
@@ -573,3 +650,4 @@ p {
   transform: scale(1.05);
   transition: 0.4s ease;
 }
+
