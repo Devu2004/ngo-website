@@ -89,7 +89,7 @@ const DonationManager = {
             </div>
             
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Cancel</button>
               <button type="button" class="btn btn-warning" onclick="DonationManager.process()">
                 <i class="fas fa-heart me-2"></i>Donate Now
               </button>
