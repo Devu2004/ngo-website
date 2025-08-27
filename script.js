@@ -535,3 +535,32 @@ document.addEventListener("DOMContentLoaded", () => {
     document.head.appendChild(style)
   }
 })
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const switcher = document.getElementById("languageSwitcher");
+
+  // default load
+  loadLanguage("en");
+
+  switcher.addEventListener("change", (e) => {
+    loadLanguage(e.target.value);
+  });
+
+  function loadLanguage(lang) {
+    fetch(`./translations/${lang}.json`)
+      .then((res) => res.json())
+      .then((data) => {
+        document.querySelectorAll("[data-translate]").forEach((el) => {
+          const key = el.getAttribute("data-translate");
+          const keys = key.split(".");
+          let text = data;
+          keys.forEach((k) => {
+            text = text[k];
+          });
+          el.textContent = text;
+        });
+      });
+  }
+});

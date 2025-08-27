@@ -1,0 +1,93 @@
+{
+  "navbar": {
+    "home": "Home",
+    "journey": "Journey",
+    "vision": "Vision",
+    "gallery": "Gallery",
+    "donate": "Donate"
+  },
+  "hero": {
+    "title": "Kids Gardens Play School: Shining Light of Hope",
+    "subtitle": "Empowering futures through education, safety, and compassion.",
+    "donateBtn": "Donate Now"
+  },
+  "challenges": {
+    "title": "Overcoming Challenges: A New Chapter",
+    "p1": "Our school faces a critical juncture. The five-year lease on our current land has expired, and with the unfortunate demise of the landowner, our continued presence there is no longer possible. This necessitates a move to a permanent location.",
+    "p2": "Imagine a space where no child is denied education due to poverty. A place where students from PG to 8th grade thrive in an environment rich with AI, skill development, technology, and modern learning. We strive to provide not just books, but a pathway to a bright future."
+  },
+  "support": {
+    "title": "Our Plea: A Call for Support",
+    "desc": "We stand at a critical juncture where our current challenges threaten to jeopardize the future of our children. The rented building is no longer secure, and we lack the own land. However, we still possess your trust, your support, and our unwavering determination.",
+    "quote": "When children receive education, security, and compassion, only then does society truly progress.",
+    "end": "Every contribution, no matter how small, makes a significant difference."
+  },
+  "help": {
+    "title": "How You Can Help: Building Foundations Together",
+    "desc": "Your support is the cornerstone of our future. We invite you to join us in creating a lasting legacy for these children.",
+    "card1Title": "1. Donate a Brick",
+    "card1Text": "Contribute towards the construction of our new school building.",
+    "card1Btn": "Donate Now",
+    "card2Title": "2. Financial Contribution",
+    "card2Text": "Provide general support for land acquisition and construction.",
+    "card2Btn": "Contribute",
+    "card3Title": "3. Share Our Story",
+    "card3Text": "Spread our message to reach compassionate hearts who can make a difference.",
+    "card3Btn": "Share Story",
+    "footerText": "A permanent school building will not just be an edifice; it will be the foundation for the futures of thousands of children."
+  },
+  "impact": {
+    "title": "Our Impact: Nurturing Future Leaders",
+    "desc": "Since its inception, Kids Gardens Play School has been a sanctuary of learning for children from underprivileged backgrounds. We believe in holistic development, fostering not just academic excellence but also critical thinking and life skills. Our programs are designed to empower every child to reach their full potential.",
+    "stat1Title": "Students Impacted",
+    "stat1Value": "500+",
+    "stat1Desc": "Over 500 children have benefited from our inclusive educational environment.",
+    "stat2Title": "Free Education",
+    "stat2Value": "100%",
+    "stat2Desc": "Ensuring accessible education for all, regardless of economic status.",
+    "stat3Title": "Retention Rate",
+    "stat3Value": "90%",
+    "stat3Desc": "High student retention reflects the positive learning experience."
+  },
+  "foundation": {
+    "title": "Saachi Foundation: Our Guiding Light",
+    "p1": "Kids Gardens Play School is proudly operated by Saachi Foundation, an NGO dedicated to social welfare and community development. Our foundation's core mission is to uplift marginalized communities through education, healthcare, and empowerment initiatives. We envision a society where every individual has the opportunity to thrive.",
+    "p2": "Our comprehensive approach addresses the root causes of poverty and inequality, aiming for sustainable change.",
+    "list1": "✔ Community development programs",
+    "list2": "✔ Healthcare support initiatives",
+    "list3": "✔ Vocational training for adults"
+  },
+    "journey": {
+    "title": "Our Journey: Planting Seeds of Knowledge",
+    "description": "On March 13, 2019, Saachi Foundation embarked on a profound mission: to establish a school where underprivileged and economically disadvantaged children could access quality education without discrimination. This vision gave birth to Kids Gardens Play School. We started in a rented shed, lacking proper facilities, but fueled by an unwavering dream and dedication.",
+    "cards": {
+      "humbleBeginnings": {
+        "title": "Humble Beginnings",
+        "text": "Started in a rented cement shed, facing extreme weather conditions with leaking roofs and sweltering heat, yet students persevered."
+      },
+      "dedication": {
+        "title": "Unwavering Dedication",
+        "text": "Despite the challenges, our commitment to providing education remained strong, driven by the hope for a brighter future for every child."
+      },
+      "dreamRealized": {
+        "title": "A Dream Realized",
+        "text": "From a small shed, Kids Gardens Play School emerged as a testament to the power of education and community support."
+      }
+    }
+  },
+   "gallery": {
+    "title": "Voices of Hope: A Glimpse into Our World",
+    "subtitle": "Explore these images that capture the essence of Kids Gardens Play School – the joy, the challenges, and the unwavering spirit of our students and staff."
+  },
+  "footer": {
+    "school": "Kids Gardens Play School",
+    "tagline": "Shining Light of Hope - Empowering futures through education, safety, and compassion.",
+    "edu": "Education: PG to 8th Grade",
+    "est": "Established: March 15, 2019",
+    "getInTouch": "Get in Touch",
+    "rights": "© 2024 Kids Gardens Play School - Saachi Foundation. All rights reserved.",
+    "motto": "Building Foundations Together",
+    "bottom": "Every contribution, no matter how small, makes a significant difference in a child's future."
+  }
+
+}
