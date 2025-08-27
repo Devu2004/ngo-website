@@ -48,66 +48,80 @@ const DonationManager = {
   },
 
   // Create donation modal HTML
-  createModal() {
-    const donateModal = `
-      <div class="modal fade" id="donateModal" tabindex="-1" aria-labelledby="donateModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="donateModalLabel">Support Kids Gardens Play School</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <p class="text-muted">Your donation will help us build a permanent home for our school and provide quality education to underprivileged children.</p>
-              
-              <div class="row g-3 mb-3">
-                ${this.amounts
-                  .map(
-                    (amount) => `
-                  <div class="col-6">
-                    <button class="btn btn-outline-primary w-100" onclick="DonationManager.selectAmount(${amount})">₹${amount.toLocaleString()}</button>
-                  </div>
-                `,
-                  )
-                  .join("")}
-              </div>
-              
-              <div class="mb-3">
-                <label for="customAmount" class="form-label">Custom Amount (₹)</label>
-                <input type="number" class="form-control" id="customAmount" placeholder="Enter amount" min="1">
-              </div>
-              
-              <div class="mb-3">
-                <label for="donorName" class="form-label">Your Name <span class="text-danger">*</span></label>
-                <input type="text" class="form-control" id="donorName" placeholder="Enter your name" required>
-              </div>
-              
-              <div class="mb-3">
-                <label for="donorEmail" class="form-label">Email Address <span class="text-danger">*</span></label>
-                <input type="email" class="form-control" id="donorEmail" placeholder="Enter your email" required>
-              </div>
+createModal() {
+  const donateModal = `
+    <div class="modal fade" id="donateModal" tabindex="-1" aria-labelledby="donateModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="donateModalLabel">Support Kids Gardens Play School</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-muted">Your donation will help us build a permanent home for our school and provide quality education to underprivileged children.</p>
+            
+            <div class="row g-3 mb-3">
+              ${this.amounts
+                .map(
+                  (amount) => `
+                <div class="col-6">
+                  <button class="btn btn-outline-primary w-100" onclick="DonationManager.selectAmount(${amount})">₹${amount.toLocaleString()}</button>
+                </div>
+              `,
+                )
+                .join("")}
             </div>
             
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Cancel</button>
-              <button type="button" class="btn btn-warning" onclick="DonationManager.process()">
-                <i class="fas fa-heart me-2"></i>Donate Now
-              </button>
+            <div class="mb-3">
+              <label for="customAmount" class="form-label">Custom Amount (₹)</label>
+              <input type="number" class="form-control" id="customAmount" placeholder="Enter amount" min="1">
             </div>
+            
+            <div class="mb-3">
+              <label for="donorName" class="form-label">Your Name <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="donorName" placeholder="Enter your name" required>
+            </div>
+            
+            <div class="mb-3">
+              <label for="donorEmail" class="form-label">Email Address <span class="text-danger">*</span></label>
+              <input type="email" class="form-control" id="donorEmail" placeholder="Enter your email" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="donorPhone" class="form-label">Phone Number <span class="text-danger">*</span></label>
+              <input 
+                type="tel" 
+                class="form-control" 
+                id="donorPhone" 
+                placeholder="Enter your phone number" 
+                pattern="[0-9]{10}" 
+                required>
+              <div class="form-text">Enter a valid 10-digit phone number</div>
+            </div>
+
+          </div>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-warning" onclick="DonationManager.process()">
+              <i class="fas fa-heart me-2"></i>Donate Now
+            </button>
           </div>
         </div>
       </div>
-    `
+    </div>
+  `
 
-    // Remove existing modal if present
-    const existingModal = document.getElementById("donateModal")
-    if (existingModal) {
-      existingModal.remove()
-    }
+  // Remove existing modal if present
+  const existingModal = document.getElementById("donateModal")
+  if (existingModal) {
+    existingModal.remove()
+  }
 
-    // Add modal to DOM
-    document.body.insertAdjacentHTML("beforeend", donateModal)
-  },
+  // Add modal to DOM
+  document.body.insertAdjacentHTML("beforeend", donateModal)
+},
+
 
   // Show donation modal
   show() {
