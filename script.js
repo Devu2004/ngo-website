@@ -9,6 +9,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       target.scrollIntoView({
         behavior: "smooth",
         block: "start",
+        
       })
     }
   })
@@ -549,6 +550,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const selectedLang = e.target.value;
     localStorage.setItem("preferredLang", selectedLang); // save user choice
     loadLanguage(selectedLang);
+    
   });
 
   function loadLanguage(lang) {
