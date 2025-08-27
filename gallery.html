@@ -29,11 +29,11 @@
   </head>
 </head>
 <body>
-    <nav
+  <nav
       class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm"
     >
       <div class="container">
-        <a class="navbar-brand fw-bold text-primary" href="#home">
+        <a  data-translate="navbar.main"class="navbar-brand fw-bold text-primary" href="#home">
           SAACHI
         </a>
         <button
@@ -46,41 +46,53 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+            <li class="nav-item" >
+              <a  data-translate="navbar.home" class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="journey.html">Journey</a>
+              <a   data-translate="navbar.journey" class="nav-link" href="journey.html">Journey</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="vision.html">Vision</a>
+              <a data-translate="navbar.vision" class="nav-link" href="vision.html">Vision</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#gallery">Gallery</a>
+              <a data-translate="navbar.gallery" class="nav-link" href="gallery.html">Gallery</a>
             </li>
             <li class="nav-item">
               <button
+              data-translate="navbar.donate"
                 class="btn btn-warning ms-2 pulse-btn"
                 onclick="handleDonate()"
               >
                 Donate
               </button>
             </li>
+<<<<<<< Updated upstream
                         <li class="nav-item dropdown  m-2  ">
   <select id="languageSwitcher" class="form-select bg-primary text-light ">
     <option value="en" class="text-center">English</option>
     <option value="hi">हिन्दी</option>
   </select>
 </li>
+=======
+            <li class="nav-item dropdown">
+  <select id="languageSwitcher" class="form-select">
+    <option value="en">English</option>
+    <option value="hi">हिन्दी</option>
+  </select>
+</li>
+ 
+>>>>>>> Stashed changes
           </ul>
         </div>
       </div>
     </nav>
+
    <!-- Gallery Section -->
     <section id="gallery" class="section-spacing">
       <div class="container">
         <div class="text-center mb-5 fade-in-up">
-          <h2 class="display-5 fw-bold">
+          <h2 class="display-5 fw-bold" >
             Voices of Hope: A Glimpse into Our World
           </h2>
           <p class="lead">

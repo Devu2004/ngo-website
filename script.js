@@ -537,15 +537,18 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const switcher = document.getElementById("languageSwitcher");
 
-  // default load
-  loadLanguage("en");
+  // saved language (default = en)
+  const savedLang = localStorage.getItem("preferredLang") || "en";
+  switcher.value = savedLang;
+  loadLanguage(savedLang);
 
   switcher.addEventListener("change", (e) => {
-    loadLanguage(e.target.value);
+    const selectedLang = e.target.value;
+    localStorage.setItem("preferredLang", selectedLang); // save user choice
+    loadLanguage(selectedLang);
   });
 
   function loadLanguage(lang) {
