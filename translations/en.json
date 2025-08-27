@@ -90,6 +90,28 @@
     "rights": "© 2024 Kids Gardens Play School - Saachi Foundation. All rights reserved.",
     "motto": "Building Foundations Together",
     "bottom": "Every contribution, no matter how small, makes a significant difference in a child's future."
+  },
+"vision": {
+    "title": "Our Vision: Building a Brighter Future",
+    "description": "Our goal is ambitious yet vital: to acquire new land and construct a healthy, safe, and technologically equipped school building. This permanent home will ensure uninterrupted, quality education for all.",
+    "cards": {
+      "land": {
+        "title": "Acquire New Land",
+        "text": "Secure a permanent site for our school's future."
+      },
+      "building": {
+        "title": "Construct Modern Building",
+        "text": "Create a safe, healthy, and tech-ready learning environment."
+      },
+      "curriculum": {
+        "title": "Advanced Curriculum",
+        "text": "Offer AI, coding, IT skills, spoken English, and employability training."
+      },
+      "inclusive": {
+        "title": "Inclusive Education",
+        "text": "Provide quality education from PG to 8th grade, without discrimination."
+      }
+    }
   }
 
 }
